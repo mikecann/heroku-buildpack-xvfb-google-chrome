@@ -31,14 +31,14 @@ function indent() {
 }
 
 stack=${STACK:-heroku-16}
-if [ "${stack,,}" != "cedar-14" ]; then
-  error "The Google Chrome Xvfb buildpack is only supported on Cedar-14."
-  error "For newer stacks you must instead use Google Chrome Buildpack,"
-  error "which runs Chrome in headless mode without Xvfb."
-  error "For more details see:"
-  error "https://devcenter.heroku.com/articles/heroku-ci#known-issues"
-  exit 1
-fi
+#if [ "${stack,,}" != "cedar-14" ]; then
+#  error "The Google Chrome Xvfb buildpack is only supported on Cedar-14."
+#  error "For newer stacks you must instead use Google Chrome Buildpack,"
+#  error "which runs Chrome in headless mode without Xvfb."
+#  error "For more details see:"
+#  error "https://devcenter.heroku.com/articles/heroku-ci#known-issues"
+#  exit 1
+#fi
 
 # Detect requested channel or default to stable
 if [ -f $ENV_DIR/GOOGLE_CHROME_CHANNEL ]; then
